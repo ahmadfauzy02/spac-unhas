@@ -1,0 +1,37 @@
+##DEFINE PROCESSING PATH
+path = '/path/to/your/files/spac-unhas/'
+spac_processing = SPACProcessing(path)
+
+##DEFINE DATA
+data_fnames = ['g1.sac', 'g2.sac', 'g3.sac', 'g4.sac', 'g5.sac', 'g6.sac', 'g7.sac']
+data_reader= SPACProcessing.ReadData(spac_processing, data_fnames, 'SAC')
+data= data_reader.read_data()
+
+##WINDOWING DATA
+data_windowing= spac_processing.Windowing(spac_processing, data_reader, 2**14)
+list_data= data_windowing.windowing('g2.sac')
+data_windowing.plot_windows()
+
+## #PLOT ALL SPAC COEFFICIENT
+## spac_coefficient.plotallspaccoef_result('g7.sac', 'g1.sac', 'g7.sac', 'g2.sac', 'g7.sac', 'g3.sac', )
+
+##CALCULATESPACCOEFFICIENT
+spac_coefficient = SPACProcessing.ComplexCoherence(spac_processing, data_windowing, fs=100, smooth_constant=150)
+f, coh= spac_coefficient.calculate_coherence('g7.sac', 'g3.sac', window_no=14)
+spac_coefficient.plot_spac()
+
+##CALCULATE SPAC COEFFICIENTS
+spaccoeff= SPACProcessing.SPACCoefficient(spac_coefficient, data_windowing, 9.24)
+list_coh, pairs_win, pairs= spaccoeff.list_coherence_file()# list_coh
+selected_pairs_win={
+    f'{list(pairs_win.keys())[0]}': [ 3,4,5,6,7,8,9, 10,11,12, 13], 
+    f'{list(pairs_win.keys())[1]}': [3,4,5,6,7,8,9, 10,11,12, 13], 
+    f'{list(pairs_win.keys())[2]}': [3,4,5,6,7,8,9, 10,11,12, 13]
+}
+
+freq, avspac= spaccoeff.avspac((list_coh, pairs_win, pairs), selected_pairs_win)
+
+##CALCULATE DISPERSION CURVES
+dc = SPACProcessing.DispersionCurve(spaccoeff)
+dc.decimator(50)
+pv, f_pv, bessel_fit, x_bessel, fitted_avspac= dc.calculate_dispcurv(100, 2000)
