@@ -1,15 +1,16 @@
 import os
-import obspy
 import numpy as np
-from obspy import read
 import pandas
-import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
-from matplotlib.cm import get_cmap
+import obspy
+from obspy import read
+import scipy
 from scipy import signal
 from scipy.fft import fft, fftfreq  # Removed duplicate fft/fftfreq import
-from matplotlib.ticker import LogLocator, FixedLocator, MultipleLocator, LogFormatter
 from scipy.signal import decimate
 from scipy.special import jv
 from scipy.optimize import least_squares
-import scipy
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+from matplotlib.cm import get_cmap
+from matplotlib.ticker import LogLocator, FixedLocator, MultipleLocator, LogFormatter
+
