@@ -1,3 +1,4 @@
+import os
 class ReadData:
     def __init__(self, parent_path_data, data_fnames, data_format):
         self.path_data= parent_path_data.path_data
