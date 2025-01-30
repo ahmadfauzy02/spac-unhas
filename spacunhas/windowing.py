@@ -11,11 +11,13 @@ class Windowing:
         self.amplitude = []
         self.window_size = window_size
         self.path_processing = parent_path_processing.path_processing
+        self.path_figures = parent_path_processing.path_figures
         self.x = []  
         self.y = []
         self.n_window = 0
         
     def windowing(self, selected_receiver=None):
+        self.selected_receiver= selected_receiver
         data = self.readed_data[0]
         if selected_receiver is None:
             print(f"No receiver specified. Available receivers: {[i['Channel'][0] for i in data]}")
@@ -78,5 +80,8 @@ class Windowing:
 
         plt.title('Windowed Data', weight='bold', pad=15)
         plt.grid(True)
+        plt.tight_layout()
+        plt.savefig(f'{self.path_figures}{self.selected_receiver}_windowed.png')
+
         plt.show()
 

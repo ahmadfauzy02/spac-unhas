@@ -8,6 +8,7 @@ from matplotlib.ticker import LogLocator, FixedLocator, MultipleLocator, LogForm
 class SPACCoefficient:
     def __init__(self, coherence_processing, windowing_processing, radius):
         self.path_processing = coherence_processing.path_processing
+        self.path_figures = coherence_processing.path_figures
         self.n_window= windowing_processing.n_window
         self.radius= radius
         self.all_frequency=[]
@@ -68,6 +69,8 @@ class SPACCoefficient:
             plt.ylabel('SPAC Coefficient', weight='bold')
             plt.xlabel('Frequency', weight='bold')
             plt.grid()
+            plt.tight_layout()
+            plt.savefig(f'{self.path_figures}/avspac_radii{self.radius}.png')
             plt.show()
             plt.close()
         else:
@@ -79,6 +82,8 @@ class SPACCoefficient:
             plt.ylabel('SPAC Coefficient', weight='bold')
             plt.xlabel('Frequency', weight='bold')
             plt.grid()
+            plt.tight_layout()
+            plt.savefig(f'{self.path_figures}/avspac_radii{self.radius}.png')
             plt.show()
             plt.close()
 

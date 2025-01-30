@@ -14,7 +14,7 @@ class DispersionCurve:
         self.radius = spaccoefficient_processing.radius
         self.frequency_decimated= []
         self.spaccoefficient_decimated= []
-
+        self.path_figures = spaccoefficient_processing.path_figures
     def decimator(self, downsampling_operator):
         freq_dec = scipy.signal.decimate(self.frequency[0], downsampling_operator)
         avspac_dec = scipy.signal.decimate(self.spaccoefficient[0], downsampling_operator)
@@ -48,6 +48,8 @@ class DispersionCurve:
         # plt.title('Dispersion Curve', weight='bold')
         plt.legend()
         plt.grid()
+        plt.tight_layout()
+        plt.savefig(f'{self.path_figures}/dispcurv_radii{self.radius}.png')
         plt.show()
         plt.close()
         np.savetxt(f'{self.path_processing}/dispcurv_radii{self.radius}.txt', 

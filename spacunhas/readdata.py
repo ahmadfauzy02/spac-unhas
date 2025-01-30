@@ -6,7 +6,8 @@ from obspy import read
 class ReadData:
     def __init__(self, parent_path_data, data_fnames, data_format):
         self.path_data= parent_path_data.path_data
-        # self.path_processing= parent_path.path_processing
+        self.path_processing= parent_path_data.path_processing
+        self.path_figures= parent_path_data.path_figures
         self.data_format= data_format
         self.data_fnames= data_fnames
         self.readed_data=[]
@@ -43,5 +44,5 @@ class ReadData:
             })
             data.append(datas)
             self.readed_data.append(data)
-            a.plot()        
+            a.plot(outfile=f'{self.path_figures}{receiver_name}.png')        
         return data
