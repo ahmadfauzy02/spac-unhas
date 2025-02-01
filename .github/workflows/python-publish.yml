@@ -7,7 +7,8 @@
 # documentation.
 
 name: spac-unhas
-
+authors= [{name=" Ahmad Fauzy Arif", email="ahmadfauzyarif@gmail.com"}]
+readme="README.md"
 on:
   release:
     types: [created]
