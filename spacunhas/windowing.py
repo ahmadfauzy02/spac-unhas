@@ -59,7 +59,7 @@ class Windowing:
                        np.column_stack((self.x[i], self.y[i])), 
                        header='#Sample (s) #Amplitude')
         # print(f'window length is{len(self.x[0])*data['Npts'][0]/60}')
-        print(f'Window has {len(self.x[0])*data[0]['Delta'][0]/60} minutes in length')  
+        print(f'Window has {len(self.x[0])*data[0]["Delta"][0]/60} minutes in length')  
         print(f'There are {self.n_window} windows')                  
         return self.n_window, self.x, self.y    
 
