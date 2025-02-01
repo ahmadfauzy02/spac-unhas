@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools >= 67.7"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -9,9 +9,9 @@ authors = [{ name="Ahmad Fauzy Arif", email="ahmadfauzyarif@gmail.com" }]
 dependencies = ["setuptools", 'scipy', 'obspy', 'pandas', 'numpy', 'matplotlib',]
 description = "SPAC processing"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 classifiers = [
-"Programming Language :: Python :: 3.12",
+"Programming Language :: Python :: 3.10",
 "Operating System :: OS Independent",
 ]
 

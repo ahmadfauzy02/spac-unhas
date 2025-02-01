@@ -26,9 +26,9 @@ setup(
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Geophysicists",
-        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.10",
         "Operating System :: OS Independent", 
     ],
-    python_requires='>=3.12',  
+    python_requires='>=3.10',  
 )
 
