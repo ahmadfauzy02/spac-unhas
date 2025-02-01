@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spac-unhas"
+version = "0.2"
+authors = [{ name="Ahmad Fauzy Arif", email="ahmadfauzyarif@gmail.com" }]
+dependencies = ["setuptools", 'scipy', 'obspy', 'pandas', 'numpy', 'matplotlib',]
+description = "SPAC processing"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+"Programming Language :: Python :: 3.10",
+"Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/ahmadfauzy02/spac-unhas"
+Issues = "https://github.com/ahmadfauzy02/spac-unhas/issues"
+[project.license]
+text = "MIT"
+license-files = ["LICENSE"] 
