@@ -1,0 +1,8 @@
+setuptools
+codecs
+os
+scipy
+obspy
+pandas
+numpy
+matplotlib
