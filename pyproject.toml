@@ -1,14 +1,10 @@
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "spac-unhas_ahmadfauzy02"
 version = "0.1"
 authors = [
   { name="Ahmad Fauzy Arif", email="ahmadfauzyarif@gmail.com" },
 ]
-description = "SPAC procssing"
+description = "SPAC processing"
 readme = "README.md"
 requires-python = ">=3.12"
 classifiers = [
