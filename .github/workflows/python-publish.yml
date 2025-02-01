@@ -10,7 +10,7 @@ name: spac-unhas
 
 on:
   release:
-    types: [published]
+    types: [created]
 
 permissions:
   contents: read
@@ -29,8 +29,8 @@ jobs:
       - name: Build release distributions
         run: |
           # NOTE: put your own distribution build steps here.
-          python -m pip install build
-          python -m setup.pu
+          python -m pip install setuptools wheels codecs, find_packages, os
+          python -m setup.py
 
       - name: Upload distributions
         uses: actions/upload-artifact@v4
