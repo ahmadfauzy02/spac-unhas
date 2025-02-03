@@ -23,5 +23,5 @@ pip install spac-unhas
 ## Additional Support
 Please leave your comment on discussion section if you have any thoughts, suggestion, or encounter any problem with this. I welcome for any improvement for further develoment. Feel free to discuss.
 
-## Additionan Information
+## Additional Information
 This script was created for my undergraduate theses titled "Site Characterization Based on Shear Wave Profiles Using MASW and SPAC Methods. A Case Study at Archery Field, Hasanuddin University".
