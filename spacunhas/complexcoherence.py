@@ -75,9 +75,9 @@ class ComplexCoherence:
 #        plt.figure(figsize=(6*self.n_window, 6))
         plt.plot(self.f[0], self.coherencies[0], c='black')
         plt.xlabel('Frequency (Hz)', weight='bold')
-        plt.ylabel('SPAC Function', weight='bold')
+        plt.ylabel('Coherencies', weight='bold')
         # if window_no:
-        plt.title(f'SPAC Function: window {self.window_no}', weight='bold')    
+        plt.title(f'Coherency: window {self.window_no}', weight='bold')    
         if freq_limit:
             plt.xlim(0, freq_limit)
         plt.ylim(-1.1, 1.1)
