@@ -25,3 +25,7 @@ Please leave your comment on discussion section if you have any thoughts, sugges
 
 ## Additional Information
 This script was created for my undergraduate theses titled "Site Characterization Based on Shear Wave Profiles Using MASW and SPAC Methods. A Case Study at Archery Field, Hasanuddin University".
+
+## Citation
+References If you use this package in your work, please consider citing this paper.
+>Syamsuddin, E., Arif, A.F., Makhrani, Arsyad, A., Effendi, R. (2025). Spatial Autocorrelation Method (SPAC) for Subsurface Shear Wave Velocity Profiling: A Non-invasive Approach for Site Characterization. IOP Conference Series: Earth and Environmental Science, 1525, 012017. https://doi.org/10.1088/1755-1315/1525/1/012017
